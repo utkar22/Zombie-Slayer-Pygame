@@ -75,6 +75,7 @@ music_playing=False
 sky_color=night_sky_0
 
 class player(object):
+    '''A class for Player objects'''
     def __init__(self,x,y,width,height,vel,status):
         self.x=x
         self.y=y
@@ -84,6 +85,8 @@ class player(object):
         self.status=status
 
     def draw(self, gameDisplay):
+        '''Drawing the player object. If the player has been bitten or infected, then the colour
+        of the skin is changed.'''
         if self.status=="Normal":
             color_skin=player_skin
         elif self.status=="Bitten":
